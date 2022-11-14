@@ -1,25 +1,38 @@
 [*]
-[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Thu Oct 27 10:17:53 2022
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Mon Nov 14 11:10:05 2022
 [*]
-[dumpfile] "/home/matt/work/asic-workshop/shuttle7/tt02-submission-template/src/tb.vcd"
-[dumpfile_mtime] "Thu Oct 27 10:17:11 2022"
-[dumpfile_size] 14468
-[savefile] "/home/matt/work/asic-workshop/shuttle7/tt02-submission-template/src/tb.gtkw"
+[dumpfile] "/home/meri/Code/TinyTapeOut/tt02-play-tune/src/tb.vcd"
+[dumpfile_mtime] "Mon Nov 14 11:07:54 2022"
+[dumpfile_size] 21125620
+[savefile] "/home/meri/Code/TinyTapeOut/tt02-play-tune/src/tb.gtkw"
 [timestart] 0
-[size] 2286 698
-[pos] -1 -1
-*-30.600000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 3840 2113
+[pos] 3865 -18
+*-40.799999 64900000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb.
 [sst_width] 343
 [signals_width] 264
 [sst_expanded] 1
-[sst_vpaned_height] 190
+[sst_vpaned_height] 662
 @28
 tb.clk
-@29
 tb.rst
-@22
-tb.segments[6:0]
+@c08023
+tb.meriac_tt02_play_tune.note_address[6:0]
+@28
+(0)tb.meriac_tt02_play_tune.note_address[6:0]
+(1)tb.meriac_tt02_play_tune.note_address[6:0]
+(2)tb.meriac_tt02_play_tune.note_address[6:0]
+(3)tb.meriac_tt02_play_tune.note_address[6:0]
+(4)tb.meriac_tt02_play_tune.note_address[6:0]
+(5)tb.meriac_tt02_play_tune.note_address[6:0]
+(6)tb.meriac_tt02_play_tune.note_address[6:0]
+@1409201
+-group_end
+@28
+tb.meriac_tt02_play_tune.speaker
+@8022
+tb.meriac_tt02_play_tune.counter[6:0]
 [pattern_trace] 1
 [pattern_trace] 0
