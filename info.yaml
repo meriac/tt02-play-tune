@@ -24,9 +24,9 @@ documentation:
   how_to_test:  "Provide 10kHz clock on io_in[0], briefly hit reset io_in[1] (L->H->L) and io_out[1:0] will play a differential sound wave over piezo speaker (Super Mario)"
   external_hw:  "Piezo speaker connected across io_out[1:0]"                                # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  doc_link:     "https://github.com/meriac/tt02-play-tune"                                  # URL to longer form documentation, eg the README.md in your repository
+  doc_link:     "https://github.com/meriac/tt02-play-tune#readme"                           # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     10000     # Clock frequency in Hz (if required)
-  picture:      ""        # relative path to a picture in your repository
+  picture:      "https://github.com/meriac/tt02-play-tune/raw/main/img/chip-design.png"     # relative path to a picture in your repository
   inputs:                 # a description of what the inputs do
     - clock
     - reset
