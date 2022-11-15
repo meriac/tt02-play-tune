@@ -40,9 +40,9 @@ import sys
 import numpy as np
 import scipy.io.wavfile as wav
 
-transpose = -3
+transpose = -4
 timer_resolution_ms = 50
-sampling_rate=10000
+sampling_rate=3000
 rttl='Super Mario:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g,8p,8c6,16p,8g,16p,8e,16p,8a,8b,16a#,8a,16g.,16e6,16g6,8a6,16f6,8g6,8e6,16c6,16d6,8b,16p,8c6,16p,8g,16p,8e,16p,8a,8b,16a#,8a,16g.,16e6,16g6,8a6,16f6,8g6,8e6,16c6,16d6,8b,8p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16g#,16a,16c6,16p,16a,16c6,16d6,8p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16c7,16p,16c7,16c7,p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16g#,16a,16c6,16p,16a,16c6,16d6,8p,16d#6,8p,16d6,8p,16c6,4p'
 
 data=np.zeros(0)
@@ -157,12 +157,14 @@ def rttl_parse(rttl):
 		# Append waveform to simulation wavefile
 		data = np.append(data, rttl_append_note(freq, duration_ms))
 
-		ticks = round(duration_ms/timer_resolution_ms)
-		comment = ' // {0:3} ({1:8}, {2:3}ms, {3:2} ticks)'.format(n+str(o)+note[4], (str(freq)+'Hz') if freq>0 else 'pause', duration_ms, ticks)
 		if freq:
-			rttl_verilog(index, int(sampling_rate/freq), ticks, comment)
+			fdiv = int(sampling_rate/freq)
 		else:
-			rttl_verilog(index, 0, ticks, comment)
+			fdiv = 0
+
+		ticks = round(duration_ms/timer_resolution_ms)
+		comment = ' // {0:3} ({1:8}, {2:3}ms, {3:2} ticks, {4:3} fdiv)'.format(n+str(o)+note[4], (str(freq)+'Hz') if freq>0 else 'pause', duration_ms, ticks, fdiv)
+		rttl_verilog(index, fdiv, ticks, comment)
 
 		index += 1;
 
