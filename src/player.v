@@ -45,7 +45,7 @@ module meriac_tt02_play_tune #( parameter MAX_COUNT = 100 ) (
     wire [10:0] db_entry;
 
     reg [6:0] note_address;
-    reg [12:0] ticks;
+    reg [10:0] ticks;
     reg [6:0] freq, counter;
     reg speaker;
 
@@ -91,8 +91,8 @@ module meriac_tt02_play_tune #( parameter MAX_COUNT = 100 ) (
                 ticks <= ticks - 1'b1;
             end else begin
                 // update per-note delay
-                ticks[12:9] <= db_entry[3:0];
-                ticks[8:0] <= 0;
+                ticks[10:7] <= db_entry[3:0];
+                ticks[6:0] <= 0;
 
                 // reset tone generator
                 counter <= db_entry[10:4];
