@@ -25,7 +25,7 @@ documentation:
   external_hw:  "Piezo speaker connected across io_out[1:0]"                                # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     "https://github.com/meriac/tt02-play-tune#readme"                           # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     3000      # Clock frequency in Hz (if required)
+  clock_hz:     3125      # Clock frequency in Hz (if required)
   picture:      "img/chip-design.png" # relative path to a picture in your repository
   inputs:                 # a description of what the inputs do
     - clock
